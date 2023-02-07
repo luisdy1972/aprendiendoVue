@@ -28,6 +28,7 @@ const ListaNumeros = ref([])
 const claseBotonGuardar = computed(() => {
 	let nuevoNumero = contador.value
 	if (ListaNumeros.value.indexOf(nuevoNumero) !== -1) {
+		console.log(ListaNumeros.value.indexOf(nuevoNumero))
 		return true
 	} else {
 		return false
