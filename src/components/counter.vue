@@ -40,23 +40,35 @@ function agregarNumero() {
 }
 </script>
 <template>
-	<h1 :class="claseContador">Contador: {{ contador }}</h1>
-	<div>
-		<button class="m-1 btn btn-success" @click="incremento">+</button>
-		<button class="m-1 btn btn-danger" @click="decremento">-</button>
-		<button class="m-1 btn btn-secondary" @click="resetar">0</button>
-		<button
-			:disabled="claseBotonGuardar"
-			class="m-1 btn btn-primary"
-			@click="agregarNumero"
-		>
-			Guardar
-		</button>
+	<div class="container">
+		<div class="d-flex justify-content-center">
+			<h1 :class="claseContador">Contador: {{ contador }}</h1>
+			<div>
+				<button class="m-1 btn btn-success" @click="incremento">
+					+
+				</button>
+				<button class="m-1 btn btn-danger" @click="decremento">
+					-
+				</button>
+				<button class="m-1 btn btn-secondary" @click="resetar">
+					0
+				</button>
+				<button
+					:disabled="claseBotonGuardar"
+					class="m-1 btn btn-primary"
+					@click="agregarNumero"
+				>
+					Guardar
+				</button>
+			</div>
+		</div>
+		<div class="d-flex justify-content-center">
+			<h2>Lista de numeros favoritos</h2>
+		</div>
+		<ul class="text-center">
+			<div v-for="item in ListaNumeros">{{ item }}</div>
+		</ul>
 	</div>
-	<h2>Lista de numeros favoritos</h2>
-	<ul>
-		<li v-for="item in ListaNumeros">{{ item }}</li>
-	</ul>
 </template>
 
 <style>
