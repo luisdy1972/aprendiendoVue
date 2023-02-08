@@ -42,12 +42,12 @@ function agregarNumero() {
 <template>
 	<h1 :class="claseContador">Contador: {{ contador }}</h1>
 	<div>
-		<button class="m-1" @click="incremento">+</button>
-		<button class="m-1" @click="decremento">-</button>
-		<button class="m-1" @click="resetar">0</button>
+		<button class="m-1 btn btn-success" @click="incremento">+</button>
+		<button class="m-1 btn btn-danger" @click="decremento">-</button>
+		<button class="m-1 btn btn-secondary" @click="resetar">0</button>
 		<button
 			:disabled="claseBotonGuardar"
-			class="m-1"
+			class="m-1 btn btn-primary"
 			@click="agregarNumero"
 		>
 			Guardar
