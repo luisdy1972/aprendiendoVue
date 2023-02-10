@@ -23,6 +23,7 @@ function BotonBuscar(query) {
 <template>
 	<h2 class="text-center">Galeria de Pexels</h2>
 	<div class="container">
+		<h3 class="text-left">Buscador:</h3>
 		<div class="input-group mb-3">
 			<input
 				v-model="text"
@@ -36,8 +37,8 @@ function BotonBuscar(query) {
 				v-model="numero"
 				type="number"
 				class="form-control"
-				placeholder="Buscar fotografias"
-				aria-label="Buscar fotografias"
+				placeholder="Numero de resultados"
+				aria-label="Numero de resultados"
 				aria-describedby="button-addon2"
 			/>
 			<button
