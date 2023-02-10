@@ -1,12 +1,36 @@
+<script setup>
+import { ref } from "vue"
+import { v4 as uuid } from "uuid"
+
+const data = ref([])
+
+let textNewNota = ref("")
+
+function addNota(text) {
+	let notaExample = {
+		id: uuid(),
+		text: text,
+	}
+	data.value.push(notaExample)
+	// console.log(data.value)
+}
+
+function removerNota(id) {
+	data.value = data.value.filter((nota) => nota.id !== id)
+	// console.log(data.value.filter((datos) => datos.id !== id))
+}
+</script>
 <template>
 	<h2>Lista de Notas</h2>
 	<form class="form-control" @submit.prevent>
 		<div class="d-flex flex-row mb-3">
-			<input v-model="newNota" />
-			<button class="btn btn-primary m-1" @click="addNota">Add</button>
+			<input v-model="textNewNota" />
+			<button class="btn btn-primary m-1" @click="addNota(textNewNota)">
+				Add
+			</button>
 		</div>
 		<ul>
-			<li v-for="nota in notas" :key="nota.id">
+			<li v-for="nota in data" :key="nota.id">
 				{{ nota.text }}
 				<button
 					:key="nota.id"
@@ -19,24 +43,3 @@
 		</ul>
 	</form>
 </template>
-<script setup>
-import { ref } from "vue"
-
-let id = 0
-
-const notas = ref([
-	{ id: id++, text: "Nota 1" },
-	{ id: id++, text: "Nota 2" },
-])
-console.log(notas.value)
-
-const newNota = ref("")
-
-function addNota() {
-	notas.value.push(newNota.value)
-}
-
-function removerNota(id) {
-	notas.value.splice(id)
-}
-</script>
