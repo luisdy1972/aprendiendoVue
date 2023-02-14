@@ -20,4 +20,4 @@ import ListaNotas from "./components/ListaNotas.vue"
 	</div>
 </template>
 
-<style></style>
+<style scoped></style>

@@ -2,7 +2,7 @@
 import axios from "axios"
 import { ref } from "vue"
 // const axios = require("axios")
-const API_KEY = "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"
+const API_KEY = "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"
 const prompt = "Muestrame un hola mundo en JS"
 
 let response = ref()
