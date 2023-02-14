@@ -11,7 +11,10 @@ function addNota(text) {
 		id: uuid(),
 		text: text,
 	}
-	data.value.push(notaExample)
+
+	notaExample.text === ""
+		? alert("No puedes agregar una nota vacia")
+		: data.value.push(notaExample)
 	// console.log(data.value)
 }
 

@@ -1,9 +1,9 @@
 <script setup>
 import { createClient } from "pexels"
 import { ref, computed } from "vue"
-let text = ref("")
+let textNota = ref("")
 let numero = ref("")
-let query = text.value
+let query = textNota.value
 const datos = ref()
 const client = createClient(
 	"NEP4uaonvRAjRYSXpE8B23mDftMGDFRhtr0pHHBP027B4YpbSHknQuJn"
@@ -26,7 +26,7 @@ function BotonBuscar(query) {
 		<h3 class="text-left">Buscador:</h3>
 		<div class="input-group mb-3">
 			<input
-				v-model="text"
+				v-model="textNota"
 				type="text"
 				class="form-control"
 				placeholder="Buscar fotografias"

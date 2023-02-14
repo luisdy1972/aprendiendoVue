@@ -2,15 +2,21 @@
 import counter from "./components/counter.vue"
 import foxs from "./components/foxs.vue"
 import galeria from "./components/galeria.vue"
-import Example from "./components/Example.vue"
+import Gpt from "./components/Gpt.vue"
+import ListaNotas from "./components/ListaNotas.vue"
 </script>
 
 <template>
 	<div class="container mt-5">
-		<Example />
-		<!-- <galeria />
-	<foxs />
-	<counter /> -->
+		<div>
+			<Gpt />
+		</div>
+		<div>
+			<ListaNotas />
+			<galeria />
+			<foxs />
+			<counter />
+		</div>
 	</div>
 </template>
 
