@@ -1,6 +1,7 @@
 <script setup>
 import { ref, reactive } from "vue";
 import { v4 as uuid } from "uuid";
+import inputBoard from "./inputBoard.vue";
 const boards = reactive([
   {
     id: uuid(),
@@ -55,22 +56,16 @@ const boards = reactive([
       >
         <div class="card shadow board">
           <h3 class="m-3 text-center">{{ el.title }}</h3>
-          <form class="input-group p-2">
-            <input class="form-control" placeholder="Nueva nota" type="text" />
-            <button class="btn btn-outline-secondary" type="submit">
-              Crear nota
-            </button>
-          </form>
-
+          <inputBoard />
           <ul
             class="container list-group list-group-flush d-flex flex-column justify-content-center mb-2 gap-1"
           >
             <li
-              v-for="(notas, index) in el.items"
-              :key="index"
+              v-for="(nota, index) in el.items"
+              :key="nota.id"
               class="list-group-item tarea-item"
             >
-              {{ notas.title }}
+              {{ nota.title }}
             </li>
           </ul>
         </div>
