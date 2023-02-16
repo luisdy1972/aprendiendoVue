@@ -21,8 +21,8 @@ function BotonBuscar(query) {
 }
 </script>
 <template>
-	<h2 class="text-center">Galeria de Pexels</h2>
 	<div class="container">
+		<h2 class="text-center">Galeria de Pexels</h2>
 		<h3 class="text-left">Buscador:</h3>
 		<div class="input-group mb-3">
 			<input

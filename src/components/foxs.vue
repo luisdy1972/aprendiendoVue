@@ -7,7 +7,6 @@ import { onMounted, ref } from "vue"
 // 		console.log(data.result)
 // 	})
 const imagenes = ref()
-
 const buscarIMG = async () => {
 	try {
 		const respuesta = await axios.get(
@@ -18,11 +17,10 @@ const buscarIMG = async () => {
 		console.error(error)
 	}
 }
-buscarIMG()
 
-// onMounted(() => {
-
-// })
+onMounted(() => {
+	buscarIMG()
+})
 </script>
 <template>
 	<h3 class="text-center">Gatos API</h3>
